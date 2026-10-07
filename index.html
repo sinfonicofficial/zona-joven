@@ -235,7 +235,35 @@ footer{
   </div>
 </section>
 
-</main>
+</main><section class="anuncios">
+  <h2>📢 Publica tu anuncio</h2>
+  <p>¿Quieres promocionar tu negocio, producto o servicio?</p>
+
+  <div class="card">
+    <h3>Publica en Zona Joven</h3>
+    <p>Haz que más personas conozcan lo que ofreces.</p>
+
+    <button onclick="document.getElementById('formulario-anuncio').scrollIntoView()">
+      ➕ Quiero publicar mi anuncio
+    </button>
+  </div>
+
+  <div id="formulario-anuncio" class="card">
+    <h3>📝 Datos del anuncio</h3>
+
+    <input type="text" placeholder="Nombre del negocio o persona">
+
+    <input type="text" placeholder="Título del anuncio">
+
+    <textarea placeholder="Describe tu producto o servicio"></textarea>
+
+    <input type="text" placeholder="Número o medio de contacto">
+
+    <button type="button">
+      Continuar
+    </button>
+  </div>
+</section>
 
 <footer>
   <p>© 2026 Zona Joven</p>
