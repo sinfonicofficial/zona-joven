@@ -1,69 +1,246 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ideas, consejos y contenido útil para estudiantes y jóvenes.">
-  <title>Zona Joven</title>
-  <style>
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#222}
-    header{background:#4f46e5;color:white;padding:28px 18px;text-align:center}
-    header h1{margin:0 0 8px;font-size:34px}
-    nav{background:white;padding:14px;text-align:center;box-shadow:0 2px 8px #0001}
-    nav a{color:#4f46e5;text-decoration:none;margin:0 12px;font-weight:bold}
-    main{max-width:900px;margin:30px auto;padding:0 18px}
-    .hero,.card{background:white;border-radius:16px;padding:25px;margin-bottom:22px;box-shadow:0 4px 15px #00000012}
-    .hero h2{font-size:28px;margin-top:0}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
-    .card h3{color:#4f46e5;margin-top:0}
-    footer{text-align:center;padding:28px;background:#222;color:white;margin-top:40px}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Zona Joven: ideas, consejos y recursos para jóvenes.">
+<title>Zona Joven</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#f4f7fb;
+  color:#222;
+}
+
+header{
+  background:linear-gradient(135deg,#4f46e5,#7c3aed);
+  color:white;
+  text-align:center;
+  padding:45px 20px;
+}
+
+header h1{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+header p{
+  font-size:18px;
+}
+
+nav{
+  background:white;
+  padding:15px;
+  text-align:center;
+  box-shadow:0 2px 8px #0002;
+  position:sticky;
+  top:0;
+}
+
+nav a{
+  color:#4f46e5;
+  text-decoration:none;
+  font-weight:bold;
+  margin:0 12px;
+}
+
+main{
+  max-width:1000px;
+  margin:auto;
+  padding:30px 20px;
+}
+
+.hero{
+  background:white;
+  padding:35px;
+  border-radius:18px;
+  text-align:center;
+  margin-bottom:30px;
+  box-shadow:0 4px 15px #0001;
+}
+
+.hero h2{
+  color:#4f46e5;
+  font-size:30px;
+  margin-bottom:15px;
+}
+
+.hero p{
+  font-size:17px;
+  line-height:1.6;
+}
+
+section{
+  margin-bottom:35px;
+}
+
+section h2{
+  color:#4f46e5;
+  margin-bottom:20px;
+  text-align:center;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:16px;
+  box-shadow:0 4px 15px #0001;
+  transition:transform .2s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card h3{
+  color:#4f46e5;
+  margin-bottom:10px;
+}
+
+.card p{
+  line-height:1.5;
+}
+
+.boton{
+  display:inline-block;
+  margin-top:20px;
+  background:#4f46e5;
+  color:white;
+  padding:12px 20px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+footer{
+  background:#202040;
+  color:white;
+  text-align:center;
+  padding:25px;
+  margin-top:30px;
+}
+
+@media(max-width:600px){
+  header h1{
+    font-size:32px;
+  }
+
+  nav a{
+    display:inline-block;
+    margin:6px;
+  }
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <h1>Zona Joven</h1>
-    <p>Ideas, consejos y contenido útil para estudiantes</p>
-  </header>
 
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#consejos">Consejos</a>
-    <a href="#recursos">Recursos</a>
-  </nav>
+<header>
+  <h1>Zona Joven</h1>
+  <p>Ideas, consejos y contenido útil para jóvenes</p>
+</header>
 
-  <main>
-    <section class="hero" id="inicio">
-      <h2>¡Bienvenido!</h2>
-      <p>En Zona Joven encontrarás contenido sencillo y práctico para aprender, organizar tus tareas y descubrir nuevas ideas.</p>
-    </section>
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#consejos">Consejos</a>
+  <a href="#recursos">Recursos</a>
+</nav>
 
-    <section id="consejos">
-      <h2>Consejos</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Organiza tu tiempo</h3>
-          <p>Divide tus tareas en pequeños objetivos y usa un horario para llevar un mejor control.</p>
-        </article>
-        <article class="card">
-          <h3>Estudia mejor</h3>
-          <p>Haz sesiones cortas de estudio, toma descansos y repasa tus apuntes con frecuencia.</p>
-        </article>
-        <article class="card">
-          <h3>Cuida tus proyectos</h3>
-          <p>Guarda tus trabajos con nombres claros y haz copias de seguridad de tus archivos importantes.</p>
-        </article>
-      </div>
-    </section>
+<main>
 
-    <section id="recursos" class="hero">
-      <h2>Recursos</h2>
-      <p>Aquí podrás agregar artículos, guías, imágenes y otros contenidos originales. Cuando el sitio tenga contenido suficiente y cumpla las políticas de Google, un adulto responsable puede revisar la posibilidad de solicitar AdSense.</p>
-    </section>
-  </main>
+<section id="inicio" class="hero">
+  <h2>¡Bienvenido a Zona Joven!</h2>
+  <p>
+    Este es un espacio creado para jóvenes donde podrás encontrar
+    consejos, ideas y recursos que pueden ayudarte en la escuela,
+    tus proyectos y tu vida diaria.
+  </p>
+  <a class="boton" href="#consejos">Ver consejos</a>
+</section>
 
-  <footer>
-    <p>© 2026 Zona Joven</p>
-  </footer>
+<section id="consejos">
+  <h2>Consejos para jóvenes</h2>
+
+  <div class="grid">
+
+    <article class="card">
+      <h3>⏰ Organiza tu tiempo</h3>
+      <p>
+        Divide tus tareas en pequeños objetivos y establece horarios
+        para estudiar, descansar y realizar tus actividades.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>📚 Estudia mejor</h3>
+      <p>
+        Busca un lugar tranquilo, evita distracciones y estudia
+        durante sesiones cortas con descansos.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>💡 Cuida tus proyectos</h3>
+      <p>
+        Guarda tus trabajos, organiza tus archivos y revisa tus
+        actividades antes de entregarlas.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<section id="recursos">
+  <h2>Recursos</h2>
+
+  <div class="grid">
+
+    <article class="card">
+      <h3>📝 Tareas</h3>
+      <p>
+        Ideas y recomendaciones para organizar mejor tus trabajos
+        escolares.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>🎯 Metas</h3>
+      <p>
+        Aprende a establecer objetivos y avanzar poco a poco hasta
+        conseguirlos.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>🌟 Motivación</h3>
+      <p>
+        Recuerda que cada pequeño avance cuenta. Sigue aprendiendo
+        y desarrollando tus habilidades.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 Zona Joven</p>
+  <p>Un espacio creado para jóvenes</p>
+</footer>
+
 </body>
 </html>
